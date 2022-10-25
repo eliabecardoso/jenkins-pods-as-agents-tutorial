@@ -1,7 +1,7 @@
 import groovy.transform.Field
 
 // We need this because of the mono repo :(
-@Field String PROJECT_DIR = 'rusty-report-printer'
+@Field String PROJECT_DIR = 'rust-report-printer'
 
 pipeline {
     agent {
@@ -14,7 +14,7 @@ pipeline {
                     image: rust:1.61-alpine3.15
                     command: ["sleep", "infinity"]
                   - name: node-class
-                    image: node:18.11-alpine3.16
+                    image: node:18.11-alpine3.15
                     command: ["sleep", "infinity"]
             '''
         }
